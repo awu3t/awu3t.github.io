@@ -7521,6 +7521,7 @@ a.anchor-link {
 <p>Link to Data Set One: <a href="https://www.pro-football-reference.com/years/2023/games.htm">https://www.pro-football-reference.com/years/2023/games.htm</a></p>
 <p>Link to Data Set Two: <a href="https://www.pro-football-reference.com/years/2023/attendance.htm">https://www.pro-football-reference.com/years/2023/attendance.htm</a></p>
 <p>Data Set Three: <a href="https://drive.google.com/file/d/1Vpr6ABqOK3EKoP3MdMdth_1YVvbRNICM/view?usp=drive_link">https://drive.google.com/file/d/1Vpr6ABqOK3EKoP3MdMdth_1YVvbRNICM/view?usp=drive_link</a></p>
+<p>Data Set Four: <a href="https://www.pro-football-reference.com/years/2022/attendance.htm">https://www.pro-football-reference.com/years/2022/attendance.htm</a></p>
 </div>
 </div>
 </div>
@@ -7543,7 +7544,7 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>This will be an investigation into NFL data from 2023. We will be looking at home wins, home team attendance, figure out what percent of each NFL stadium was filled, and use that data to learn about fan impacts at home stadiums. This will allow us to determine if there is a certain stadium that has an advantage to play at because of the fans.</p>
-<p>Questions we wil look at include 'How impactful is the home-field advtantage?' 'Is there a good/bad stadium to play in' and other questions that may come up while looking into the data sets.</p>
+<p>Questions we wil look at include 'How impactful is the home-field advtantage because of the fans?' 'Is fan attendance a measurable factor for team success?' and other questions that may come up while looking into the data sets.</p>
 </div>
 </div>
 </div>
@@ -7566,6 +7567,7 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Data-Set-One:-Each-NFL-Football-Game-for-2023"><strong>Data Set One: Each NFL Football Game for 2023</strong><a class="anchor-link" href="#Data-Set-One:-Each-NFL-Football-Game-for-2023">¶</a></h2><p>This data set comes from Pro-Football-Reference.com. This site collects data from each NFL season and makes tables out of it for people to use. With this table, the unit of observation is an NFL game from the 2023 season. This data set shows each game starting from week 1 all the way to the SuperBowl. It specifies the winner, loser, when the game was, and specifics with the points and yards. Through some data transformations, we can find out how often home teams won. Combining this table with other data sets could bring interesting information, especially with seeing what can influence a home team advantage.</p>
+<p>For anyone who is unfamiliar with the NFL schedule, this is a great source to look at: <a href="https://operations.nfl.com/gameday/nfl-schedule/creating-the-nfl-schedule/">https://operations.nfl.com/gameday/nfl-schedule/creating-the-nfl-schedule/</a> . It provides great detail into all of the different factors and decisions that are made to create the NFL schedule for each season.</p>
 </div>
 </div>
 </div>
@@ -7574,7 +7576,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="n">schedule_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="s2">"https://www.pro-football-reference.com/years/2023/games.htm#games"</span><span class="p">)</span> <span class="c1"># Reads entire table in as a list</span>
@@ -7590,9 +7592,9 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[30]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
-<div class="colab-df-container" id="df-68c6b580-6f3b-4487-9d10-e1af107a93b3">
+<div class="colab-df-container" id="df-93944b8b-5ce7-42b0-a39d-347122201389">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -7821,7 +7823,7 @@ a.anchor-link {
 </div>
 <div class="colab-df-buttons">
 <div class="colab-df-container">
-<button class="colab-df-convert" onclick="convertToInteractive('df-68c6b580-6f3b-4487-9d10-e1af107a93b3')" style="display:none;" title="Convert this dataframe to an interactive table.">
+<button class="colab-df-convert" onclick="convertToInteractive('df-93944b8b-5ce7-42b0-a39d-347122201389')" style="display:none;" title="Convert this dataframe to an interactive table.">
 <svg height="24px" viewbox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg">
 <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
 </svg>
@@ -7868,12 +7870,12 @@ a.anchor-link {
   </style>
 <script>
       const buttonEl =
-        document.querySelector('#df-68c6b580-6f3b-4487-9d10-e1af107a93b3 button.colab-df-convert');
+        document.querySelector('#df-93944b8b-5ce7-42b0-a39d-347122201389 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-68c6b580-6f3b-4487-9d10-e1af107a93b3');
+        const element = document.querySelector('#df-93944b8b-5ce7-42b0-a39d-347122201389');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -7891,8 +7893,8 @@ a.anchor-link {
       }
     </script>
 </div>
-<div id="df-2938e8ef-9c3a-4f1c-a525-3454267a307a">
-<button class="colab-df-quickchart" onclick="quickchart('df-2938e8ef-9c3a-4f1c-a525-3454267a307a')" style="display:none;" title="Suggest charts">
+<div id="df-7fcba738-122f-4f39-b24f-ea222cf83ed0">
+<button class="colab-df-quickchart" onclick="quickchart('df-7fcba738-122f-4f39-b24f-ea222cf83ed0')" style="display:none;" title="Suggest charts">
 <svg height="24px" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
 <g>
 <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"></path>
@@ -8005,13 +8007,13 @@ a.anchor-link {
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-2938e8ef-9c3a-4f1c-a525-3454267a307a button');
+        document.querySelector('#df-7fcba738-122f-4f39-b24f-ea222cf83ed0 button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
   </script>
 </div>
-<div id="id_fdf569fe-8132-4dc9-a7b8-ec894b28866d">
+<div id="id_6ef1839e-9087-4a51-878b-c90788e06a2c">
 <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -8051,7 +8053,7 @@ a.anchor-link {
 <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_fdf569fe-8132-4dc9-a7b8-ec894b28866d button.colab-df-generate');
+        document.querySelector('#id_6ef1839e-9087-4a51-878b-c90788e06a2c button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
@@ -8084,7 +8086,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># Changes to Columns and their Values</span>
@@ -8114,7 +8116,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># Deleting Specified Rows</span>
@@ -8134,9 +8136,9 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[32]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
-<div class="colab-df-container" id="df-7994ef8f-6c0a-42e3-a0fd-431dd7017fd9">
+<div class="colab-df-container" id="df-95057603-8735-46d2-a2c4-ce21b3546cd9">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -8245,7 +8247,7 @@ a.anchor-link {
 </div>
 <div class="colab-df-buttons">
 <div class="colab-df-container">
-<button class="colab-df-convert" onclick="convertToInteractive('df-7994ef8f-6c0a-42e3-a0fd-431dd7017fd9')" style="display:none;" title="Convert this dataframe to an interactive table.">
+<button class="colab-df-convert" onclick="convertToInteractive('df-95057603-8735-46d2-a2c4-ce21b3546cd9')" style="display:none;" title="Convert this dataframe to an interactive table.">
 <svg height="24px" viewbox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg">
 <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
 </svg>
@@ -8292,12 +8294,12 @@ a.anchor-link {
   </style>
 <script>
       const buttonEl =
-        document.querySelector('#df-7994ef8f-6c0a-42e3-a0fd-431dd7017fd9 button.colab-df-convert');
+        document.querySelector('#df-95057603-8735-46d2-a2c4-ce21b3546cd9 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-7994ef8f-6c0a-42e3-a0fd-431dd7017fd9');
+        const element = document.querySelector('#df-95057603-8735-46d2-a2c4-ce21b3546cd9');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -8315,8 +8317,8 @@ a.anchor-link {
       }
     </script>
 </div>
-<div id="df-73262e87-714a-4ecc-b164-c10fe2b56a4e">
-<button class="colab-df-quickchart" onclick="quickchart('df-73262e87-714a-4ecc-b164-c10fe2b56a4e')" style="display:none;" title="Suggest charts">
+<div id="df-ae373ffd-bea1-4e19-bb58-71c6aaf7d397">
+<button class="colab-df-quickchart" onclick="quickchart('df-ae373ffd-bea1-4e19-bb58-71c6aaf7d397')" style="display:none;" title="Suggest charts">
 <svg height="24px" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
 <g>
 <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"></path>
@@ -8429,13 +8431,13 @@ a.anchor-link {
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-73262e87-714a-4ecc-b164-c10fe2b56a4e button');
+        document.querySelector('#df-ae373ffd-bea1-4e19-bb58-71c6aaf7d397 button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
   </script>
 </div>
-<div id="id_d16e0c35-bbc9-4765-9908-5d86b354b653">
+<div id="id_8f982a12-b6d8-411d-9498-d66ea614d4b9">
 <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -8475,7 +8477,7 @@ a.anchor-link {
 <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_d16e0c35-bbc9-4765-9908-5d86b354b653 button.colab-df-generate');
+        document.querySelector('#id_8f982a12-b6d8-411d-9498-d66ea614d4b9 button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
@@ -8507,7 +8509,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="n">schedule_data</span><span class="o">.</span><span class="n">dtypes</span>
@@ -8521,7 +8523,7 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[33]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -8584,7 +8586,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="n">home_away_count</span> <span class="o">=</span> <span class="n">schedule_data</span><span class="p">[</span><span class="s2">"Winner: Home or Away Game"</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span> <span class="c1"># Gets the count of home/away wins</span>
@@ -8599,7 +8601,7 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[34]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>&lt;Axes: title={'center': 'Number of Home Wins vs. Number of Away Wins'}, xlabel='Home or Away', ylabel='Number of Wins'&gt;</pre>
 </div>
@@ -8629,7 +8631,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [35]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># Create new column and apply the if/else logic to each value</span>
@@ -8648,9 +8650,9 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[35]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
-<div class="colab-df-container" id="df-6e0c5604-d56c-4971-8e50-ea9097afc61c">
+<div class="colab-df-container" id="df-511c2d55-fd11-4158-8d08-74c511a5fc57">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -8771,7 +8773,7 @@ a.anchor-link {
 </div>
 <div class="colab-df-buttons">
 <div class="colab-df-container">
-<button class="colab-df-convert" onclick="convertToInteractive('df-6e0c5604-d56c-4971-8e50-ea9097afc61c')" style="display:none;" title="Convert this dataframe to an interactive table.">
+<button class="colab-df-convert" onclick="convertToInteractive('df-511c2d55-fd11-4158-8d08-74c511a5fc57')" style="display:none;" title="Convert this dataframe to an interactive table.">
 <svg height="24px" viewbox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg">
 <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
 </svg>
@@ -8818,12 +8820,12 @@ a.anchor-link {
   </style>
 <script>
       const buttonEl =
-        document.querySelector('#df-6e0c5604-d56c-4971-8e50-ea9097afc61c button.colab-df-convert');
+        document.querySelector('#df-511c2d55-fd11-4158-8d08-74c511a5fc57 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-6e0c5604-d56c-4971-8e50-ea9097afc61c');
+        const element = document.querySelector('#df-511c2d55-fd11-4158-8d08-74c511a5fc57');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -8841,8 +8843,8 @@ a.anchor-link {
       }
     </script>
 </div>
-<div id="df-4cb00d9f-21f5-4d13-a17f-e1c33dffee15">
-<button class="colab-df-quickchart" onclick="quickchart('df-4cb00d9f-21f5-4d13-a17f-e1c33dffee15')" style="display:none;" title="Suggest charts">
+<div id="df-14f3a746-c78a-480d-9803-7f0c6da335be">
+<button class="colab-df-quickchart" onclick="quickchart('df-14f3a746-c78a-480d-9803-7f0c6da335be')" style="display:none;" title="Suggest charts">
 <svg height="24px" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
 <g>
 <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"></path>
@@ -8955,13 +8957,13 @@ a.anchor-link {
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-4cb00d9f-21f5-4d13-a17f-e1c33dffee15 button');
+        document.querySelector('#df-14f3a746-c78a-480d-9803-7f0c6da335be button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
   </script>
 </div>
-<div id="id_3c3c53e1-1969-4bde-ad41-2c4d4a7046eb">
+<div id="id_1ea10a2b-19a9-4df7-bccf-8b5f611d05ee">
 <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -9001,7 +9003,7 @@ a.anchor-link {
 <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_3c3c53e1-1969-4bde-ad41-2c4d4a7046eb button.colab-df-generate');
+        document.querySelector('#id_1ea10a2b-19a9-4df7-bccf-8b5f611d05ee button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
@@ -9035,7 +9037,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># Create new column and apply if/else logic</span>
@@ -9058,7 +9060,7 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[36]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -9239,7 +9241,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="n">attendance_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="s2">"https://www.pro-football-reference.com/years/2023/attendance.htm#attendance"</span><span class="p">)</span> <span class="c1"># Reads entire table in as a list</span>
@@ -9265,10 +9267,11 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="n">attendance_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">attendance_data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">attendance_data</span><span class="o">=</span><span class="n">attendance_data</span><span class="p">[[</span><span class="s2">"Tm"</span><span class="p">,</span><span class="s2">"Home"</span><span class="p">]]</span>
 <span class="n">attendance_data</span>
 </pre></div>
 </div>
@@ -9280,9 +9283,9 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[38]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
-<div class="colab-df-container" id="df-8f176635-4d8a-425b-b9f3-0bc5d3244939">
+<div class="colab-df-container" id="df-9d213e2f-a4cc-4247-b4d4-e698bc160bf6">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -9302,804 +9305,176 @@ a.anchor-link {
 <tr style="text-align: right;">
 <th></th>
 <th>Tm</th>
-<th>Total</th>
 <th>Home</th>
-<th>Away</th>
-<th>Week 1</th>
-<th>Week 2</th>
-<th>Week 3</th>
-<th>Week 4</th>
-<th>Week 5</th>
-<th>Week 6</th>
-<th>...</th>
-<th>Week 9</th>
-<th>Week 10</th>
-<th>Week 11</th>
-<th>Week 12</th>
-<th>Week 13</th>
-<th>Week 14</th>
-<th>Week 15</th>
-<th>Week 16</th>
-<th>Week 17</th>
-<th>Week 18</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <th>0</th>
 <td>Arizona Cardinals</td>
-<td>1113568</td>
 <td>502912.0</td>
-<td>610656.0</td>
-<td>64693</td>
-<td>62080</td>
-<td>62915</td>
-<td>71521</td>
-<td>62651</td>
-<td>71202</td>
-<td>...</td>
-<td>67919</td>
-<td>62861</td>
-<td>70247</td>
-<td>62177</td>
-<td>66436</td>
-<td>Bye</td>
-<td>63967</td>
-<td>59978</td>
-<td>69879</td>
-<td>63197</td>
 </tr>
 <tr>
 <th>1</th>
 <td>Atlanta Falcons</td>
-<td>1176416</td>
 <td>556828.0</td>
-<td>619588.0</td>
-<td>69597</td>
-<td>69251</td>
-<td>63803</td>
-<td>85716</td>
-<td>69461</td>
-<td>69921</td>
-<td>...</td>
-<td>69715</td>
-<td>62861</td>
-<td>Bye</td>
-<td>70166</td>
-<td>74455</td>
-<td>69496</td>
-<td>70301</td>
-<td>69221</td>
-<td>61752</td>
-<td>70072</td>
 </tr>
 <tr>
 <th>2</th>
 <td>Baltimore Ravens</td>
-<td>1170734</td>
 <td>635380.0</td>
-<td>535354.0</td>
-<td>70136</td>
-<td>66015</td>
-<td>70038</td>
-<td>67919</td>
-<td>67272</td>
-<td>61011</td>
-<td>...</td>
-<td>70753</td>
-<td>70424</td>
-<td>70997</td>
-<td>70240</td>
-<td>Bye</td>
-<td>70492</td>
-<td>68021</td>
-<td>71812</td>
-<td>71196</td>
-<td>70355</td>
 </tr>
 <tr>
 <th>3</th>
 <td>Buffalo Bills</td>
-<td>1183200</td>
 <td>626483.0</td>
-<td>556717.0</td>
-<td>83345</td>
-<td>70772</td>
-<td>64291</td>
-<td>70881</td>
-<td>61273</td>
-<td>70515</td>
-<td>...</td>
-<td>66965</td>
-<td>70318</td>
-<td>70603</td>
-<td>69879</td>
-<td>Bye</td>
-<td>73639</td>
-<td>70933</td>
-<td>67678</td>
-<td>70772</td>
-<td>66292</td>
 </tr>
 <tr>
 <th>4</th>
 <td>Carolina Panthers</td>
-<td>1163926</td>
 <td>573086.0</td>
-<td>590840.0</td>
-<td>69597</td>
-<td>72709</td>
-<td>68699</td>
-<td>72842</td>
-<td>63648</td>
-<td>65529</td>
-<td>...</td>
-<td>72301</td>
-<td>61200</td>
-<td>73543</td>
-<td>62493</td>
-<td>62432</td>
-<td>70009</td>
-<td>70301</td>
-<td>70875</td>
-<td>67233</td>
-<td>69010</td>
 </tr>
 <tr>
 <th>5</th>
 <td>Chicago Bears</td>
-<td>1111491</td>
 <td>494157.0</td>
-<td>617334.0</td>
-<td>62456</td>
-<td>62976</td>
-<td>73562</td>
-<td>62220</td>
-<td>63727</td>
-<td>62167</td>
-<td>...</td>
-<td>70006</td>
-<td>61200</td>
-<td>63873</td>
-<td>66843</td>
-<td>Bye</td>
-<td>62185</td>
-<td>67919</td>
-<td>59978</td>
-<td>61752</td>
-<td>78188</td>
 </tr>
 <tr>
 <th>6</th>
 <td>Cincinnati Bengals</td>
-<td>1144696</td>
 <td>594361.0</td>
-<td>550335.0</td>
-<td>67919</td>
-<td>66015</td>
-<td>65158</td>
-<td>68951</td>
-<td>62651</td>
-<td>66385</td>
-<td>...</td>
-<td>66965</td>
-<td>66526</td>
-<td>70997</td>
-<td>65090</td>
-<td>67951</td>
-<td>65981</td>
-<td>66376</td>
-<td>66646</td>
-<td>73565</td>
-<td>65865</td>
 </tr>
 <tr>
 <th>7</th>
 <td>Cleveland Browns</td>
-<td>1168498</td>
 <td>610295.0</td>
-<td>558203.0</td>
-<td>67919</td>
-<td>67576</td>
-<td>67919</td>
-<td>67919</td>
-<td>Bye</td>
-<td>67431</td>
-<td>...</td>
-<td>67919</td>
-<td>70424</td>
-<td>67919</td>
-<td>76261</td>
-<td>72887</td>
-<td>67431</td>
-<td>67919</td>
-<td>70831</td>
-<td>67919</td>
-<td>65865</td>
 </tr>
 <tr>
 <th>8</th>
 <td>Dallas Cowboys</td>
-<td>1378746</td>
 <td>748755.0</td>
-<td>629991.0</td>
-<td>80809</td>
-<td>93689</td>
-<td>62915</td>
-<td>93719</td>
-<td>71617</td>
-<td>70240</td>
-<td>...</td>
-<td>69879</td>
-<td>93338</td>
-<td>73543</td>
-<td>93711</td>
-<td>93367</td>
-<td>93752</td>
-<td>70933</td>
-<td>66410</td>
-<td>93731</td>
-<td>63645</td>
 </tr>
 <tr>
 <th>9</th>
 <td>Denver Broncos</td>
-<td>1226925</td>
 <td>687498.0</td>
-<td>539427.0</td>
-<td>76299</td>
-<td>76108</td>
-<td>65522</td>
-<td>62220</td>
-<td>76387</td>
-<td>73528</td>
-<td>...</td>
-<td>Bye</td>
-<td>70318</td>
-<td>76848</td>
-<td>76261</td>
-<td>71670</td>
-<td>70240</td>
-<td>64500</td>
-<td>76201</td>
-<td>76228</td>
-<td>61429</td>
 </tr>
 <tr>
 <th>10</th>
 <td>Detroit Lions</td>
-<td>1170249</td>
 <td>518741.0</td>
-<td>651508.0</td>
-<td>73522</td>
-<td>66434</td>
-<td>63803</td>
-<td>78052</td>
-<td>63648</td>
-<td>65854</td>
-<td>...</td>
-<td>Bye</td>
-<td>70240</td>
-<td>63873</td>
-<td>66476</td>
-<td>70003</td>
-<td>62185</td>
-<td>64500</td>
-<td>66932</td>
-<td>93731</td>
-<td>63233</td>
 </tr>
 <tr>
 <th>11</th>
 <td>Green Bay Packers</td>
-<td>1242403</td>
 <td>622636.0</td>
-<td>619767.0</td>
-<td>62456</td>
-<td>69251</td>
-<td>78043</td>
-<td>78052</td>
-<td>62572</td>
-<td>Bye</td>
-<td>...</td>
-<td>77409</td>
-<td>67617</td>
-<td>77432</td>
-<td>66476</td>
-<td>78124</td>
-<td>76637</td>
-<td>77275</td>
-<td>70875</td>
-<td>67003</td>
-<td>78188</td>
 </tr>
 <tr>
 <th>12</th>
 <td>Houston Texans</td>
-<td>1184936</td>
 <td>640742.0</td>
-<td>544194.0</td>
-<td>70136</td>
-<td>71159</td>
-<td>61466</td>
-<td>71399</td>
-<td>69461</td>
-<td>71810</td>
-<td>...</td>
-<td>70785</td>
-<td>66526</td>
-<td>70247</td>
-<td>71324</td>
-<td>71670</td>
-<td>72956</td>
-<td>66219</td>
-<td>70831</td>
-<td>71517</td>
-<td>65925</td>
 </tr>
 <tr>
 <th>13</th>
 <td>Indianapolis Colts</td>
-<td>1113729</td>
 <td>587393.0</td>
-<td>526336.0</td>
-<td>65749</td>
-<td>71159</td>
-<td>70038</td>
-<td>65337</td>
-<td>65287</td>
-<td>64851</td>
-<td>...</td>
-<td>72301</td>
-<td>50144</td>
-<td>Bye</td>
-<td>64407</td>
-<td>62641</td>
-<td>65981</td>
-<td>64171</td>
-<td>69221</td>
-<td>65538</td>
-<td>65925</td>
 </tr>
 <tr>
 <th>14</th>
 <td>Jacksonville Jaguars</td>
-<td>1150901</td>
 <td>621599.0</td>
-<td>529302.0</td>
-<td>65749</td>
-<td>69915</td>
-<td>61466</td>
-<td>85716</td>
-<td>61273</td>
-<td>64851</td>
-<td>...</td>
-<td>Bye</td>
-<td>69271</td>
-<td>67175</td>
-<td>71324</td>
-<td>67951</td>
-<td>67431</td>
-<td>68021</td>
-<td>62547</td>
-<td>67233</td>
-<td>63744</td>
 </tr>
 <tr>
 <th>15</th>
 <td>Kansas City Chiefs</td>
-<td>1205847</td>
 <td>638715.0</td>
-<td>567132.0</td>
-<td>73522</td>
-<td>69915</td>
-<td>73562</td>
-<td>80461</td>
-<td>67003</td>
-<td>73528</td>
-<td>...</td>
-<td>50023</td>
-<td>Bye</td>
-<td>73754</td>
-<td>62441</td>
-<td>78124</td>
-<td>73639</td>
-<td>64628</td>
-<td>73480</td>
-<td>73565</td>
-<td>68274</td>
 </tr>
 <tr>
 <th>16</th>
 <td>Las Vegas Raiders</td>
-<td>1111041</td>
 <td>559713.0</td>
-<td>551328.0</td>
-<td>76299</td>
-<td>70772</td>
-<td>62541</td>
-<td>70240</td>
-<td>62572</td>
-<td>61985</td>
-<td>...</td>
-<td>62082</td>
-<td>62383</td>
-<td>66026</td>
-<td>62441</td>
-<td>Bye</td>
-<td>62626</td>
-<td>61654</td>
-<td>73480</td>
-<td>65538</td>
-<td>61429</td>
 </tr>
 <tr>
 <th>17</th>
 <td>Los Angeles Chargers</td>
-<td>1190939</td>
 <td>627632.0</td>
-<td>563307.0</td>
-<td>70240</td>
-<td>67438</td>
-<td>66878</td>
-<td>70240</td>
-<td>Bye</td>
-<td>70240</td>
-<td>...</td>
-<td>75407</td>
-<td>70240</td>
-<td>77432</td>
-<td>70240</td>
-<td>64628</td>
-<td>70240</td>
-<td>61654</td>
-<td>67678</td>
-<td>76228</td>
-<td>68274</td>
 </tr>
 <tr>
 <th>18</th>
 <td>Los Angeles Rams</td>
-<td>1235049</td>
 <td>585204.0</td>
-<td>649845.0</td>
-<td>68683</td>
-<td>74742</td>
-<td>65158</td>
-<td>65337</td>
-<td>74935</td>
-<td>71202</td>
-<td>...</td>
-<td>77409</td>
-<td>Bye</td>
-<td>72704</td>
-<td>62177</td>
-<td>72887</td>
-<td>70492</td>
-<td>72035</td>
-<td>73228</td>
-<td>75517</td>
-<td>71624</td>
 </tr>
 <tr>
 <th>19</th>
 <td>Miami Dolphins</td>
-<td>1136583</td>
 <td>593304.0</td>
-<td>543279.0</td>
-<td>70240</td>
-<td>64628</td>
-<td>65522</td>
-<td>70881</td>
-<td>65654</td>
-<td>65529</td>
-<td>...</td>
-<td>50023</td>
-<td>Bye</td>
-<td>66026</td>
-<td>82973</td>
-<td>63459</td>
-<td>66068</td>
-<td>65967</td>
-<td>66410</td>
-<td>71196</td>
-<td>66292</td>
 </tr>
 <tr>
 <th>20</th>
 <td>Minnesota Vikings</td>
-<td>1157107</td>
 <td>535308.0</td>
-<td>621799.0</td>
-<td>66741</td>
-<td>69879</td>
-<td>66878</td>
-<td>72842</td>
-<td>67003</td>
-<td>62167</td>
-<td>...</td>
-<td>69715</td>
-<td>66933</td>
-<td>76848</td>
-<td>66843</td>
-<td>Bye</td>
-<td>62626</td>
-<td>66376</td>
-<td>66932</td>
-<td>67003</td>
-<td>63233</td>
 </tr>
 <tr>
 <th>21</th>
 <td>New England Patriots</td>
-<td>1165144</td>
 <td>567168.0</td>
-<td>597976.0</td>
-<td>64628</td>
-<td>64628</td>
-<td>80876</td>
-<td>93719</td>
-<td>64628</td>
-<td>61985</td>
-<td>...</td>
-<td>64628</td>
-<td>50144</td>
-<td>Bye</td>
-<td>82211</td>
-<td>64628</td>
-<td>66376</td>
-<td>64628</td>
-<td>76201</td>
-<td>70772</td>
-<td>64628</td>
 </tr>
 <tr>
 <th>22</th>
 <td>New Orleans Saints</td>
-<td>1188849</td>
 <td>560164.0</td>
-<td>628685.0</td>
-<td>70024</td>
-<td>72709</td>
-<td>78043</td>
-<td>70003</td>
-<td>64628</td>
-<td>71810</td>
-<td>...</td>
-<td>70006</td>
-<td>66933</td>
-<td>Bye</td>
-<td>70166</td>
-<td>70003</td>
-<td>70009</td>
-<td>70038</td>
-<td>73228</td>
-<td>65741</td>
-<td>70072</td>
 </tr>
 <tr>
 <th>23</th>
 <td>New York Giants</td>
-<td>1262352</td>
 <td>634459.0</td>
-<td>627893.0</td>
-<td>80809</td>
-<td>62080</td>
-<td>71593</td>
-<td>78507</td>
-<td>65654</td>
-<td>70515</td>
-<td>...</td>
-<td>62082</td>
-<td>93338</td>
-<td>62714</td>
-<td>82211</td>
-<td>Bye</td>
-<td>76637</td>
-<td>70038</td>
-<td>69879</td>
-<td>75517</td>
-<td>75740</td>
 </tr>
 <tr>
 <th>24</th>
 <td>New York Jets</td>
-<td>1285954</td>
 <td>701011.0</td>
-<td>584943.0</td>
-<td>83345</td>
-<td>93689</td>
-<td>80876</td>
-<td>80461</td>
-<td>76387</td>
-<td>83068</td>
-<td>...</td>
-<td>75407</td>
-<td>62383</td>
-<td>70603</td>
-<td>82973</td>
-<td>74455</td>
-<td>72956</td>
-<td>65967</td>
-<td>67470</td>
-<td>67919</td>
-<td>64628</td>
 </tr>
 <tr>
 <th>25</th>
 <td>Philadelphia Eagles</td>
-<td>1223746</td>
 <td>559032.0</td>
-<td>664714.0</td>
-<td>64628</td>
-<td>69879</td>
-<td>65426</td>
-<td>69879</td>
-<td>74935</td>
-<td>83068</td>
-<td>...</td>
-<td>69879</td>
-<td>Bye</td>
-<td>73754</td>
-<td>69879</td>
-<td>69879</td>
-<td>93752</td>
-<td>68758</td>
-<td>69879</td>
-<td>69879</td>
-<td>75740</td>
 </tr>
 <tr>
 <th>26</th>
 <td>Pittsburgh Steelers</td>
-<td>1146477</td>
 <td>602796.0</td>
-<td>543681.0</td>
-<td>67679</td>
-<td>67576</td>
-<td>62541</td>
-<td>71399</td>
-<td>67272</td>
-<td>Bye</td>
-<td>...</td>
-<td>65969</td>
-<td>67617</td>
-<td>67919</td>
-<td>65090</td>
-<td>66436</td>
-<td>66376</td>
-<td>64171</td>
-<td>66646</td>
-<td>68735</td>
-<td>70355</td>
 </tr>
 <tr>
 <th>27</th>
 <td>San Francisco 49ers</td>
-<td>1186315</td>
 <td>573245.0</td>
-<td>613070.0</td>
-<td>67679</td>
-<td>74742</td>
-<td>71593</td>
-<td>71521</td>
-<td>71617</td>
-<td>67431</td>
-<td>...</td>
-<td>Bye</td>
-<td>69271</td>
-<td>71607</td>
-<td>68702</td>
-<td>69879</td>
-<td>71816</td>
-<td>63967</td>
-<td>71812</td>
-<td>64424</td>
-<td>71624</td>
 </tr>
 <tr>
 <th>28</th>
 <td>Seattle Seahawks</td>
-<td>1193230</td>
 <td>549886.0</td>
-<td>643344.0</td>
-<td>68683</td>
-<td>66434</td>
-<td>68699</td>
-<td>78507</td>
-<td>Bye</td>
-<td>66385</td>
-<td>...</td>
-<td>70753</td>
-<td>68721</td>
-<td>72704</td>
-<td>68702</td>
-<td>93367</td>
-<td>71816</td>
-<td>68758</td>
-<td>60181</td>
-<td>68735</td>
-<td>63197</td>
 </tr>
 <tr>
 <th>29</th>
 <td>Tampa Bay Buccaneers</td>
-<td>1140061</td>
 <td>510321.0</td>
-<td>629740.0</td>
-<td>66741</td>
-<td>62976</td>
-<td>65426</td>
-<td>70003</td>
-<td>Bye</td>
-<td>65854</td>
-<td>...</td>
-<td>70785</td>
-<td>62725</td>
-<td>71607</td>
-<td>64407</td>
-<td>62432</td>
-<td>69496</td>
-<td>77275</td>
-<td>62547</td>
-<td>65741</td>
-<td>69010</td>
 </tr>
 <tr>
 <th>30</th>
 <td>Tennessee Titans</td>
-<td>1117370</td>
 <td>580686.0</td>
-<td>536684.0</td>
-<td>70024</td>
-<td>67438</td>
-<td>67919</td>
-<td>68951</td>
-<td>65287</td>
-<td>61011</td>
-<td>...</td>
-<td>65969</td>
-<td>62725</td>
-<td>67175</td>
-<td>62493</td>
-<td>62641</td>
-<td>66068</td>
-<td>66219</td>
-<td>60181</td>
-<td>71517</td>
-<td>63744</td>
 </tr>
 <tr>
 <th>31</th>
 <td>Washington Commanders</td>
-<td>1175750</td>
 <td>511606.0</td>
-<td>664144.0</td>
-<td>64693</td>
-<td>76108</td>
-<td>64291</td>
-<td>69879</td>
-<td>63727</td>
-<td>69921</td>
-<td>...</td>
-<td>64628</td>
-<td>68721</td>
-<td>62714</td>
-<td>93711</td>
-<td>63459</td>
-<td>Bye</td>
-<td>72035</td>
-<td>67470</td>
-<td>64424</td>
-<td>63645</td>
 </tr>
 </tbody>
 </table>
-<p>32 rows × 22 columns</p>
 </div>
 <div class="colab-df-buttons">
 <div class="colab-df-container">
-<button class="colab-df-convert" onclick="convertToInteractive('df-8f176635-4d8a-425b-b9f3-0bc5d3244939')" style="display:none;" title="Convert this dataframe to an interactive table.">
+<button class="colab-df-convert" onclick="convertToInteractive('df-9d213e2f-a4cc-4247-b4d4-e698bc160bf6')" style="display:none;" title="Convert this dataframe to an interactive table.">
 <svg height="24px" viewbox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg">
 <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
 </svg>
@@ -10146,12 +9521,12 @@ a.anchor-link {
   </style>
 <script>
       const buttonEl =
-        document.querySelector('#df-8f176635-4d8a-425b-b9f3-0bc5d3244939 button.colab-df-convert');
+        document.querySelector('#df-9d213e2f-a4cc-4247-b4d4-e698bc160bf6 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-8f176635-4d8a-425b-b9f3-0bc5d3244939');
+        const element = document.querySelector('#df-9d213e2f-a4cc-4247-b4d4-e698bc160bf6');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -10169,8 +9544,8 @@ a.anchor-link {
       }
     </script>
 </div>
-<div id="df-3afbb031-93c9-4758-bc97-c814d90649af">
-<button class="colab-df-quickchart" onclick="quickchart('df-3afbb031-93c9-4758-bc97-c814d90649af')" style="display:none;" title="Suggest charts">
+<div id="df-f5d62ac0-82e8-47ba-84b9-922b89985c2a">
+<button class="colab-df-quickchart" onclick="quickchart('df-f5d62ac0-82e8-47ba-84b9-922b89985c2a')" style="display:none;" title="Suggest charts">
 <svg height="24px" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
 <g>
 <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"></path>
@@ -10283,13 +9658,13 @@ a.anchor-link {
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-3afbb031-93c9-4758-bc97-c814d90649af button');
+        document.querySelector('#df-f5d62ac0-82e8-47ba-84b9-922b89985c2a button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
   </script>
 </div>
-<div id="id_ff203043-01de-44cd-925a-e3c1a9f7969c">
+<div id="id_2b60c77a-d3af-4fa4-bd78-eaa707c67327">
 <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -10329,7 +9704,7 @@ a.anchor-link {
 <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_ff203043-01de-44cd-925a-e3c1a9f7969c button.colab-df-generate');
+        document.querySelector('#id_2b60c77a-d3af-4fa4-bd78-eaa707c67327 button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
@@ -10361,7 +9736,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [39]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="n">attendance_data</span><span class="o">.</span><span class="n">dtypes</span>
@@ -10375,7 +9750,7 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[39]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -10404,88 +9779,8 @@ a.anchor-link {
 <td>object</td>
 </tr>
 <tr>
-<th>Total</th>
-<td>int64</td>
-</tr>
-<tr>
 <th>Home</th>
 <td>float64</td>
-</tr>
-<tr>
-<th>Away</th>
-<td>float64</td>
-</tr>
-<tr>
-<th>Week 1</th>
-<td>int64</td>
-</tr>
-<tr>
-<th>Week 2</th>
-<td>int64</td>
-</tr>
-<tr>
-<th>Week 3</th>
-<td>int64</td>
-</tr>
-<tr>
-<th>Week 4</th>
-<td>int64</td>
-</tr>
-<tr>
-<th>Week 5</th>
-<td>object</td>
-</tr>
-<tr>
-<th>Week 6</th>
-<td>object</td>
-</tr>
-<tr>
-<th>Week 7</th>
-<td>object</td>
-</tr>
-<tr>
-<th>Week 8</th>
-<td>int64</td>
-</tr>
-<tr>
-<th>Week 9</th>
-<td>object</td>
-</tr>
-<tr>
-<th>Week 10</th>
-<td>object</td>
-</tr>
-<tr>
-<th>Week 11</th>
-<td>object</td>
-</tr>
-<tr>
-<th>Week 12</th>
-<td>int64</td>
-</tr>
-<tr>
-<th>Week 13</th>
-<td>object</td>
-</tr>
-<tr>
-<th>Week 14</th>
-<td>object</td>
-</tr>
-<tr>
-<th>Week 15</th>
-<td>int64</td>
-</tr>
-<tr>
-<th>Week 16</th>
-<td>int64</td>
-</tr>
-<tr>
-<th>Week 17</th>
-<td>int64</td>
-</tr>
-<tr>
-<th>Week 18</th>
-<td>int64</td>
 </tr>
 </tbody>
 </table>
@@ -10510,7 +9805,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="n">attendance_data</span><span class="p">[</span><span class="s2">"Home"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -10524,7 +9819,7 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[40]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>590972.375</pre>
 </div>
@@ -10536,7 +9831,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="n">attendance_data</span><span class="p">[</span><span class="s2">"Home"</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
@@ -10550,7 +9845,7 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>586298.5</pre>
 </div>
@@ -10574,7 +9869,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># Create df grouped by the team and showing the total home attendance</span>
@@ -10592,7 +9887,7 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -10771,7 +10066,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="n">stadium_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'/content/drive/MyDrive/NFL_Stadium.csv'</span><span class="p">)</span>
@@ -10786,9 +10081,9 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
-<div class="colab-df-container" id="df-ae678e3b-e674-4b83-9e22-6797d676bfb3">
+<div class="colab-df-container" id="df-5923497e-a6c9-417b-8c8d-9e4b6aedbe12">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -11091,7 +10386,7 @@ a.anchor-link {
 </div>
 <div class="colab-df-buttons">
 <div class="colab-df-container">
-<button class="colab-df-convert" onclick="convertToInteractive('df-ae678e3b-e674-4b83-9e22-6797d676bfb3')" style="display:none;" title="Convert this dataframe to an interactive table.">
+<button class="colab-df-convert" onclick="convertToInteractive('df-5923497e-a6c9-417b-8c8d-9e4b6aedbe12')" style="display:none;" title="Convert this dataframe to an interactive table.">
 <svg height="24px" viewbox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg">
 <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
 </svg>
@@ -11138,12 +10433,12 @@ a.anchor-link {
   </style>
 <script>
       const buttonEl =
-        document.querySelector('#df-ae678e3b-e674-4b83-9e22-6797d676bfb3 button.colab-df-convert');
+        document.querySelector('#df-5923497e-a6c9-417b-8c8d-9e4b6aedbe12 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-ae678e3b-e674-4b83-9e22-6797d676bfb3');
+        const element = document.querySelector('#df-5923497e-a6c9-417b-8c8d-9e4b6aedbe12');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -11161,8 +10456,8 @@ a.anchor-link {
       }
     </script>
 </div>
-<div id="df-1204d3a4-bf65-49c8-a2ee-2cc813054efe">
-<button class="colab-df-quickchart" onclick="quickchart('df-1204d3a4-bf65-49c8-a2ee-2cc813054efe')" style="display:none;" title="Suggest charts">
+<div id="df-fd79c3a2-d0e5-40fb-ac97-e07aa5fed7c7">
+<button class="colab-df-quickchart" onclick="quickchart('df-fd79c3a2-d0e5-40fb-ac97-e07aa5fed7c7')" style="display:none;" title="Suggest charts">
 <svg height="24px" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
 <g>
 <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"></path>
@@ -11275,13 +10570,13 @@ a.anchor-link {
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-1204d3a4-bf65-49c8-a2ee-2cc813054efe button');
+        document.querySelector('#df-fd79c3a2-d0e5-40fb-ac97-e07aa5fed7c7 button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
   </script>
 </div>
-<div id="id_b264d9e5-f402-4a45-b20a-3d248b8fce4f">
+<div id="id_f57455d8-b3d3-40b7-aa8f-f19ba4b18b91">
 <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -11321,7 +10616,7 @@ a.anchor-link {
 <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_b264d9e5-f402-4a45-b20a-3d248b8fce4f button.colab-df-generate');
+        document.querySelector('#id_f57455d8-b3d3-40b7-aa8f-f19ba4b18b91 button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
@@ -11353,7 +10648,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="n">stadium_data</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">"Name"</span><span class="p">,</span> <span class="s2">"Opened"</span><span class="p">,</span> <span class="s2">"Turf"</span><span class="p">,</span> <span class="s2">"Cost"</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -11378,7 +10673,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># Renaming the Team column name for the Rams/Chargers</span>
@@ -11416,7 +10711,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="n">stadium_data</span><span class="o">.</span><span class="n">dtypes</span>
@@ -11430,7 +10725,7 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -11485,7 +10780,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># This basically deletes each comma and replaces it with nothing</span>
@@ -11514,10 +10809,10 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="n">stadium_data</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">"Capacity"</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="highlight hl-python"><pre><span></span><span class="n">stadium_data</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">"Capacity"</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">stadium_data</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">"Team(s)"</span><span class="p">:</span> <span class="s2">"Team"</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="c1"># stadium_data["Team"]=stadium_data["Team(s)"]</span>
 
@@ -11532,9 +10827,9 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
-<div class="colab-df-container" id="df-6d9e73b0-7cf4-451c-b77c-97e1d0b99a16">
+<div class="colab-df-container" id="df-b9606ed4-0655-4709-8351-b2244042593b">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -11559,14 +10854,29 @@ a.anchor-link {
 </thead>
 <tbody>
 <tr>
-<th>0</th>
-<td>Pittsburgh Steelers</td>
-<td>68400</td>
+<th>31</th>
+<td>New York Jets</td>
+<td>82500</td>
 </tr>
 <tr>
-<th>1</th>
-<td>Las Vegas Raiders</td>
-<td>65000</td>
+<th>20</th>
+<td>New York Giants</td>
+<td>82500</td>
+</tr>
+<tr>
+<th>13</th>
+<td>Green Bay Packers</td>
+<td>81441</td>
+</tr>
+<tr>
+<th>3</th>
+<td>Dallas Cowboys</td>
+<td>80000</td>
+</tr>
+<tr>
+<th>22</th>
+<td>Washington Commanders</td>
+<td>79000</td>
 </tr>
 <tr>
 <th>2</th>
@@ -11574,9 +10884,9 @@ a.anchor-link {
 <td>76416</td>
 </tr>
 <tr>
-<th>3</th>
-<td>Dallas Cowboys</td>
-<td>80000</td>
+<th>6</th>
+<td>Denver Broncos</td>
+<td>76125</td>
 </tr>
 <tr>
 <th>4</th>
@@ -11589,64 +10899,14 @@ a.anchor-link {
 <td>73208</td>
 </tr>
 <tr>
-<th>6</th>
-<td>Denver Broncos</td>
-<td>76125</td>
-</tr>
-<tr>
-<th>7</th>
-<td>Jacksonville Jaguars</td>
-<td>67264</td>
-</tr>
-<tr>
-<th>8</th>
-<td>Detroit Lions</td>
-<td>65000</td>
-</tr>
-<tr>
-<th>9</th>
-<td>New England Patriots</td>
-<td>65878</td>
-</tr>
-<tr>
-<th>10</th>
-<td>Miami Dolphins</td>
-<td>65326</td>
+<th>23</th>
+<td>Houston Texans</td>
+<td>71795</td>
 </tr>
 <tr>
 <th>11</th>
 <td>Buffalo Bills</td>
 <td>71608</td>
-</tr>
-<tr>
-<th>12</th>
-<td>Cleveland Browns</td>
-<td>67895</td>
-</tr>
-<tr>
-<th>13</th>
-<td>Green Bay Packers</td>
-<td>81441</td>
-</tr>
-<tr>
-<th>14</th>
-<td>San Francisco 49ers</td>
-<td>68500</td>
-</tr>
-<tr>
-<th>15</th>
-<td>Philadelphia Eagles</td>
-<td>67594</td>
-</tr>
-<tr>
-<th>16</th>
-<td>Indianapolis Colts</td>
-<td>67000</td>
-</tr>
-<tr>
-<th>17</th>
-<td>Seattle Seahawks</td>
-<td>68740</td>
 </tr>
 <tr>
 <th>18</th>
@@ -11659,54 +10919,9 @@ a.anchor-link {
 <td>71000</td>
 </tr>
 <tr>
-<th>20</th>
-<td>New York Giants</td>
-<td>82500</td>
-</tr>
-<tr>
-<th>21</th>
-<td>Tennessee Titans</td>
-<td>69143</td>
-</tr>
-<tr>
-<th>22</th>
-<td>Washington Commanders</td>
-<td>79000</td>
-</tr>
-<tr>
-<th>23</th>
-<td>Houston Texans</td>
-<td>71795</td>
-</tr>
-<tr>
-<th>24</th>
-<td>Cincinnati Bengals</td>
-<td>65515</td>
-</tr>
-<tr>
-<th>25</th>
-<td>Tampa Bay Buccaneers</td>
-<td>65890</td>
-</tr>
-<tr>
 <th>26</th>
 <td>Los Angeles Rams</td>
 <td>70000</td>
-</tr>
-<tr>
-<th>27</th>
-<td>Chicago Bears</td>
-<td>61500</td>
-</tr>
-<tr>
-<th>28</th>
-<td>Arizona Cardinals</td>
-<td>63400</td>
-</tr>
-<tr>
-<th>29</th>
-<td>Minnesota Vikings</td>
-<td>66200</td>
 </tr>
 <tr>
 <th>30</th>
@@ -11714,16 +10929,96 @@ a.anchor-link {
 <td>70000</td>
 </tr>
 <tr>
-<th>31</th>
-<td>New York Jets</td>
-<td>82500</td>
+<th>21</th>
+<td>Tennessee Titans</td>
+<td>69143</td>
+</tr>
+<tr>
+<th>17</th>
+<td>Seattle Seahawks</td>
+<td>68740</td>
+</tr>
+<tr>
+<th>14</th>
+<td>San Francisco 49ers</td>
+<td>68500</td>
+</tr>
+<tr>
+<th>0</th>
+<td>Pittsburgh Steelers</td>
+<td>68400</td>
+</tr>
+<tr>
+<th>12</th>
+<td>Cleveland Browns</td>
+<td>67895</td>
+</tr>
+<tr>
+<th>15</th>
+<td>Philadelphia Eagles</td>
+<td>67594</td>
+</tr>
+<tr>
+<th>7</th>
+<td>Jacksonville Jaguars</td>
+<td>67264</td>
+</tr>
+<tr>
+<th>16</th>
+<td>Indianapolis Colts</td>
+<td>67000</td>
+</tr>
+<tr>
+<th>29</th>
+<td>Minnesota Vikings</td>
+<td>66200</td>
+</tr>
+<tr>
+<th>25</th>
+<td>Tampa Bay Buccaneers</td>
+<td>65890</td>
+</tr>
+<tr>
+<th>9</th>
+<td>New England Patriots</td>
+<td>65878</td>
+</tr>
+<tr>
+<th>24</th>
+<td>Cincinnati Bengals</td>
+<td>65515</td>
+</tr>
+<tr>
+<th>10</th>
+<td>Miami Dolphins</td>
+<td>65326</td>
+</tr>
+<tr>
+<th>1</th>
+<td>Las Vegas Raiders</td>
+<td>65000</td>
+</tr>
+<tr>
+<th>8</th>
+<td>Detroit Lions</td>
+<td>65000</td>
+</tr>
+<tr>
+<th>28</th>
+<td>Arizona Cardinals</td>
+<td>63400</td>
+</tr>
+<tr>
+<th>27</th>
+<td>Chicago Bears</td>
+<td>61500</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="colab-df-buttons">
 <div class="colab-df-container">
-<button class="colab-df-convert" onclick="convertToInteractive('df-6d9e73b0-7cf4-451c-b77c-97e1d0b99a16')" style="display:none;" title="Convert this dataframe to an interactive table.">
+<button class="colab-df-convert" onclick="convertToInteractive('df-b9606ed4-0655-4709-8351-b2244042593b')" style="display:none;" title="Convert this dataframe to an interactive table.">
 <svg height="24px" viewbox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg">
 <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
 </svg>
@@ -11770,12 +11065,12 @@ a.anchor-link {
   </style>
 <script>
       const buttonEl =
-        document.querySelector('#df-6d9e73b0-7cf4-451c-b77c-97e1d0b99a16 button.colab-df-convert');
+        document.querySelector('#df-b9606ed4-0655-4709-8351-b2244042593b button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-6d9e73b0-7cf4-451c-b77c-97e1d0b99a16');
+        const element = document.querySelector('#df-b9606ed4-0655-4709-8351-b2244042593b');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -11793,8 +11088,8 @@ a.anchor-link {
       }
     </script>
 </div>
-<div id="df-7a14730c-22bf-4d6b-a4b0-ada3ec89c5bd">
-<button class="colab-df-quickchart" onclick="quickchart('df-7a14730c-22bf-4d6b-a4b0-ada3ec89c5bd')" style="display:none;" title="Suggest charts">
+<div id="df-18cc88cf-c76e-4a62-97a1-ae3e7b28f71d">
+<button class="colab-df-quickchart" onclick="quickchart('df-18cc88cf-c76e-4a62-97a1-ae3e7b28f71d')" style="display:none;" title="Suggest charts">
 <svg height="24px" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
 <g>
 <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"></path>
@@ -11907,13 +11202,13 @@ a.anchor-link {
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-7a14730c-22bf-4d6b-a4b0-ada3ec89c5bd button');
+        document.querySelector('#df-18cc88cf-c76e-4a62-97a1-ae3e7b28f71d button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
   </script>
 </div>
-<div id="id_eb1ed733-2939-4b8d-b1f2-dd4cc91806a5">
+<div id="id_c92484ce-bdbe-42b4-b10a-fa5b1f1c9494">
 <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -11953,7 +11248,7 @@ a.anchor-link {
 <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_eb1ed733-2939-4b8d-b1f2-dd4cc91806a5 button.colab-df-generate');
+        document.querySelector('#id_c92484ce-bdbe-42b4-b10a-fa5b1f1c9494 button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
@@ -11996,7 +11291,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># Creates new dataframe, sorted alphabetically by team</span>
@@ -12012,7 +11307,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># Merges the stadium data in teams capacity with the total home attendance from attendance_data</span>
@@ -12039,7 +11334,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="n">afc</span><span class="o">=</span><span class="p">[</span><span class="s1">'Baltimore Ravens'</span><span class="p">,</span> <span class="s1">'Buffalo Bills'</span><span class="p">,</span><span class="s1">'Cincinnati Bengals'</span><span class="p">,</span> <span class="s1">'Cleveland Browns'</span><span class="p">,</span>
@@ -12072,7 +11367,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="n">teams_capacity</span><span class="p">[</span><span class="s2">"Attendance Percentage"</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">teams_capacity</span><span class="p">[</span><span class="s2">"Average Home Attendance"</span><span class="p">]</span>
@@ -12087,7 +11382,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># Drop columns that we don't need anymore</span>
@@ -12102,13 +11397,15 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># Add the home wins to the table so we can see the trends and compare</span>
 <span class="n">home_wins</span> <span class="o">=</span> <span class="n">Grouped_home_team_wins</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
+
 <span class="n">teams_capacity</span><span class="o">=</span><span class="n">teams_capacity</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">home_wins</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s2">"Team"</span><span class="p">,</span>
                                     <span class="n">right_on</span><span class="o">=</span><span class="s2">"Winner/tie"</span><span class="p">)</span>
+
 <span class="n">teams_capacity</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">"Home Wins"</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">teams_capacity</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
@@ -12123,9 +11420,9 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
-<div class="colab-df-container" id="df-8a635776-3770-4d5d-9223-89c644455e61">
+<div class="colab-df-container" id="df-b29b095b-53ce-4bde-806d-8ba0bc435cb9">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -12347,7 +11644,7 @@ a.anchor-link {
 </div>
 <div class="colab-df-buttons">
 <div class="colab-df-container">
-<button class="colab-df-convert" onclick="convertToInteractive('df-8a635776-3770-4d5d-9223-89c644455e61')" style="display:none;" title="Convert this dataframe to an interactive table.">
+<button class="colab-df-convert" onclick="convertToInteractive('df-b29b095b-53ce-4bde-806d-8ba0bc435cb9')" style="display:none;" title="Convert this dataframe to an interactive table.">
 <svg height="24px" viewbox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg">
 <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
 </svg>
@@ -12394,12 +11691,12 @@ a.anchor-link {
   </style>
 <script>
       const buttonEl =
-        document.querySelector('#df-8a635776-3770-4d5d-9223-89c644455e61 button.colab-df-convert');
+        document.querySelector('#df-b29b095b-53ce-4bde-806d-8ba0bc435cb9 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-8a635776-3770-4d5d-9223-89c644455e61');
+        const element = document.querySelector('#df-b29b095b-53ce-4bde-806d-8ba0bc435cb9');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -12417,8 +11714,8 @@ a.anchor-link {
       }
     </script>
 </div>
-<div id="df-d3515d89-abc7-43b8-839b-0e397c22fb89">
-<button class="colab-df-quickchart" onclick="quickchart('df-d3515d89-abc7-43b8-839b-0e397c22fb89')" style="display:none;" title="Suggest charts">
+<div id="df-95004f79-4f2c-4fe9-a7e2-97ba07ce9e2e">
+<button class="colab-df-quickchart" onclick="quickchart('df-95004f79-4f2c-4fe9-a7e2-97ba07ce9e2e')" style="display:none;" title="Suggest charts">
 <svg height="24px" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
 <g>
 <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"></path>
@@ -12531,13 +11828,13 @@ a.anchor-link {
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-d3515d89-abc7-43b8-839b-0e397c22fb89 button');
+        document.querySelector('#df-95004f79-4f2c-4fe9-a7e2-97ba07ce9e2e button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
   </script>
 </div>
-<div id="id_d4166ec8-f56e-42d7-9e0c-d6aaa572f851">
+<div id="id_ba86a450-c18c-40bd-8fab-0ff473b6c026">
 <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -12577,7 +11874,7 @@ a.anchor-link {
 <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_d4166ec8-f56e-42d7-9e0c-d6aaa572f851 button.colab-df-generate');
+        document.querySelector('#id_ba86a450-c18c-40bd-8fab-0ff473b6c026 button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
@@ -12604,6 +11901,39 @@ a.anchor-link {
 </div>
 </div>
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">teams_capacity</span><span class="p">[</span><span class="s2">"Attendance Percentage"</span><span class="p">],</span> <span class="n">teams_capacity</span><span class="p">[</span><span class="s2">"Home Wins"</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Attendance Percentage"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"Home Wins"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Relationship between Attendance Percentage and Home Wins"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedImage jp-OutputArea-output" tabindex="0">
+<img alt="No description has been provided for this image" class="" src="data:image/png;base64,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E3hodHd3e2hUWDCoyVN5LwwiOZDje0shhLDY9VUZGRn44IMPsHbtWiQnJ8PLywsDBgzAhx9+iEqVKhX7+vT0dGg0GqSlpUGtVpdDxUT0tJHTXUqJ5MSc7y1Tf39bNMyUFcMMERGR/Jj6+5s/NElERESyxjBDREREssYwQ0RERLLGMENERESyxjBDREREssYwQ0RERLLGMENERESyxjBDREREssYwQ0RERLLGMENERESyxjBDREREssYwQ0RERLLGMENERESyxjBDREREssYwQ0RERLLGMENERESyxjBDREREssYwQ0RERLLGMENERESyxjBDREREssYwQ0RERLLGMENERESyxjBDREREssYwQ0RERLLGMENERESyxjBDREREssYwQ0RERLLGMENERESyxjBDREREssYwQ0RERLLGMENERESyxjBDREREssYwQ0RERLLGMENERESyxjBDREREssYwQ0RERLJmY+kCiEi+8rUChxNSkZyRDTcnFZr7OMPaSmHpsool17qJyDCLhplatWrh6tWresPffPNNfP311xaoiIiMtfl0EqI3nEFSWrY0zFOjwtRu/ggL8LRgZUWTa91EVDiLHmY6cuQIkpKSpMe2bdsAAP369bNkWURUjM2nkzAy7phOIACAW2nZGBl3DJtPJ1mosqLJtW4iKppFw4yrqys8PDykx8aNG+Hr64vQ0FBLlkVERcjXCkRvOANhYFzBsOgNZ5CvNdTCcuRaNxEV76k5ATg3NxdxcXF47bXXoFAYPnadk5OD9PR0nQcRla/DCal6ezYeJwAkpWXjcEJq+RVlBLnWTUTFe2rCzG+//YZ79+5hyJAhhbaJiYmBRqORHt7e3uVXIBEBAJIzCg8EpWlXXuRaNxEV76kJMwsXLkR4eDi8vLwKbRMVFYW0tDTpcf369XKskIgAwM1JZdJ25UWudRNR8Z6KS7OvXr2K7du3Y82aNUW2UyqVUCqV5VQVERnS3McZnhoVbqVlGzz/RAHAQ/PocueniVzrJqLiPRV7ZhYtWgQ3Nzd06dLF0qUQUTGsrRSY2s0fwKMA8LiC51O7+T91922Ra91EVDyLhxmtVotFixYhMjISNjZPxY4iIipGWIAnFgxqAg+N7iEZD40KCwY1eWrv1yLXuomoaAohhEWvQ9y6dSs6deqE8+fPo27duiV6bXp6OjQaDdLS0qBWq81UIREVRq530pVr3UQVham/vy0eZsqCYYaIiEh+TP39bfHDTERERERlwTBDREREssYwQ0RERLLGMENERESyxjBDREREssYwQ0RERLLGMENERESyxjBDREREssYwQ0RERLLGMENERESyxjBDREREssYwQ0RERLLGMENERESyxjBDREREssYwQ0RERLLGMENERESyxjBDREREssYwQ0RERLLGMENERESyxjBDREREssYwQ0RERLLGMENERESyxjBDREREssYwQ0RERLLGMENERESyxjBDREREssYwQ0RERLLGMENERESyxjBDREREssYwQ0RERLLGMENERESyxjBDREREssYwQ0RERLLGMENERESyxjBDREREssYwQ0RERLJmY+kCiIiKkq8VOJyQiuSMbFR1UAIK4L/7OXBzUqFpzSo4evUukjOy4eakQnMfZ1hbKYyenrGvMSVLz99cKmq/SB4sHmZu3LiByZMnY9OmTcjKyoKfnx8WLVqEZs2aWbo0IrKwzaeTEL3hDJLSsg2Ot1IAWvF/zz01Kkzt5o+wAE+jp1fca0zJ0vM3l4raL5IPix5munv3Llq1agVbW1ts2rQJZ86cweeff44qVapYsiwiegpsPp2EkXHHCg0ygG6QAYBbadkYGXcMm08nGT29ol5jSpaev7lU1H6RvFg0zMycORPe3t5YtGgRmjdvDh8fH3Ts2BG+vr6WLIuILCxfKxC94QxE8U11FLSP3nAG+Y8lnaKmV9hrTMnS8zeXitovkh+Lhpn169ejWbNm6NevH9zc3NC4cWP88MMPhbbPyclBenq6zoOIKp7DCalF7pEpigCQlJaNwwmpRk/P0GtMydLzN5eK2i+SH4uGmStXrmDBggWoU6cOtmzZgpEjR2Ls2LH4+eefDbaPiYmBRqORHt7e3uVcMRGVh+SM0gWZwqZh7PRMMd+yTNdc8zeXitovkh+LhhmtVosmTZrg008/RePGjfHGG29g2LBh+Pbbbw22j4qKQlpamvS4fv16OVdMROXBzUll0mkYOz1TzLcs0zXX/M2lovaL5MeiYcbT0xP+/v46wxo0aIBr164ZbK9UKqFWq3UeRFTxNPdxhqdGhdJc2KvAoytpmvs4Gz09Q68xJUvP31wqar9IfiwaZlq1aoXz58/rDLtw4QJq1qxpoYqI6GlgbaXA1G6P/tApSaApaDu1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
+"/>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -12611,7 +11941,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Ideas-For-Models-We-Could-Build"><strong>Ideas For Models We Could Build</strong><a class="anchor-link" href="#Ideas-For-Models-We-Could-Build">¶</a></h2>
+<h2 id="Preprocessing-For-Our-Model"><strong>Preprocessing For Our Model</strong><a class="anchor-link" href="#Preprocessing-For-Our-Model">¶</a></h2>
 </div>
 </div>
 </div>
@@ -12622,9 +11952,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<ol>
-<li>For one model, we could use just the 2023 season data (home wins, fan attendance, percentage of stadium capacity filled). We could split the 2023 data and train the model based on the first half of the season and test it on the second half of the season. This would show us the strength of the correlation between the fan impact and the likelihood of a home win. Since the 2023 season has already played out, we would be able to see how accurate the predictions were.</li>
-</ol>
+<p>We are going to build a model that helps us see how strong of a relationship there is between the attendance percentage and the number of home wins. Hopefully, the model can accurately predict the correct number of home wins for each team. We are going to need some more data to make predictions, so we will read in the same data above, but for the 2022 season.</p>
 </div>
 </div>
 </div>
@@ -12635,9 +11963,44 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<ol start="2">
-<li>Another idea would be to do what we did above, but with the 2022 and 2021 seasons (the only other 17 game seasons in the NFL). We could then combine all of the fan attendance, stadium capacity, and home win data together to see if we can predict the teams with the most home wins for the 2024 NFL season. This would allow us to have a bigger dataset, which would hopefully make the predictions more reliable and accurate.</li>
-</ol>
+<p>To work with the 2022 data, we are going to read in the same exact files at the start of the lab, just the 2022 versions. In the code box below, we ran the same exact commands that we did for Data Set 1.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-python"><pre><span></span><span class="n">schedule_data2022</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="s2">"https://www.pro-football-reference.com/years/2022/games.htm"</span><span class="p">)</span> <span class="c1"># Reads entire table in as a list</span>
+<span class="n">schedule_data2022</span> <span class="o">=</span> <span class="n">schedule_data2022</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># Takes the first part of list (so the entire table)</span>
+
+<span class="c1"># Drops unnecessary columns, renames certain columns, and maps new values in the columns</span>
+<span class="n">schedule_data2022</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">"Day"</span><span class="p">,</span> <span class="s2">"Date"</span><span class="p">,</span> <span class="s2">"Time"</span><span class="p">,</span> <span class="s2">"Unnamed: 7"</span><span class="p">,</span> <span class="s2">"PtsW"</span><span class="p">,</span> <span class="s2">"PtsL"</span><span class="p">,</span> <span class="s2">"YdsW"</span><span class="p">,</span> <span class="s2">"TOW"</span><span class="p">,</span> <span class="s2">"YdsL"</span><span class="p">,</span> <span class="s2">"TOL"</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">schedule_data2022</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">"Unnamed: 5"</span><span class="p">:</span> <span class="s2">"Winner: Home or Away Game"</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">schedule_data2022</span><span class="p">[</span><span class="s2">"Winner: Home or Away Game"</span><span class="p">]</span> <span class="o">=</span> <span class="n">schedule_data2022</span><span class="p">[</span><span class="s2">"Winner: Home or Away Game"</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="s2">"@"</span><span class="p">:</span> <span class="s2">"Away"</span><span class="p">})</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">"Home"</span><span class="p">)</span>
+
+<span class="c1"># Deleting Specified Rows</span>
+<span class="n">schedule_data2022</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">"Winner/tie"</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># Drop rows with NaN</span>
+<span class="n">rows_without_team</span> <span class="o">=</span> <span class="n">schedule_data2022</span><span class="p">[</span><span class="n">schedule_data2022</span><span class="p">[</span><span class="s2">"Winner/tie"</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">"Winner/tie"</span><span class="p">)]</span><span class="o">.</span><span class="n">index</span> <span class="c1"># Specifies rows with "Winner/tie" should be dropped</span>
+<span class="n">schedule_data2022</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">rows_without_team</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># Drop those rows</span>
+<span class="n">schedule_data2022</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">schedule_data2022</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">14</span><span class="p">:],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># Drop Playoff Games</span>
+
+<span class="c1"># If statement to determine if the home team lost or won</span>
+<span class="n">schedule_data2022</span><span class="p">[</span><span class="s2">"Home Team"</span><span class="p">]</span> <span class="o">=</span> <span class="n">schedule_data2022</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+    <span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">row</span><span class="p">[</span><span class="s2">"Loser/tie"</span><span class="p">]</span> <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s2">"Winner: Home or Away Game"</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"Away"</span> <span class="k">else</span> <span class="n">row</span><span class="p">[</span><span class="s2">"Winner/tie"</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span>
+<span class="p">)</span>
+<span class="c1"># Create new column and apply if/else logic</span>
+<span class="n">schedule_data2022</span><span class="p">[</span><span class="s2">"Home Wins"</span><span class="p">]</span> <span class="o">=</span><span class="n">schedule_data2022</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+    <span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s2">"Winner/tie"</span><span class="p">]</span> <span class="o">==</span> <span class="n">row</span><span class="p">[</span><span class="s2">"Home Team"</span><span class="p">]</span> <span class="k">else</span> <span class="mi">0</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span>
+<span class="p">)</span>
+<span class="c1"># Groups the number of home wins by team</span>
+<span class="n">Grouped_home_team_wins2022</span> <span class="o">=</span> <span class="n">schedule_data2022</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"Winner/tie"</span><span class="p">)[</span><span class="s2">"Home Wins"</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -12648,9 +12011,869 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<ol start="3">
-<li>Another idea would be to calculate the correlation coefficient between the percent of each team's stadium that is full and the home win rate. This would give us a general idea on if there is a positive or negative correlation.</li>
-</ol>
+<p>This code block below does the same exact commands and data processing for what we did in Data Set Two, but for the 2022 attendance data.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-python"><pre><span></span><span class="n">attendance_data2022</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="s2">"https://www.pro-football-reference.com/years/2022/attendance.htm"</span><span class="p">)</span> <span class="c1"># Reads entire table in as a list</span>
+<span class="n">attendance_data2022</span> <span class="o">=</span> <span class="n">attendance_data2022</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># Takes the first part of list (so the entire table)</span>
+
+<span class="c1"># Drops specified row and makes the dataframe only the team and home attendance</span>
+<span class="n">attendance_data2022</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">attendance_data2022</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">attendance_data2022</span> <span class="o">=</span> <span class="n">attendance_data2022</span><span class="p">[[</span><span class="s2">"Tm"</span><span class="p">,</span><span class="s2">"Home"</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>The code block below combines the tables we loaded in for 2022 and the stadium data (Data Set Three). Again, it's the same exact code that we used in the section above. The only thing we had to change was what we were dividing by to get the average home attendance for each game. For 2022, the AFC teams had 8 home games instead of 9 and the NFC had 9 home games instead of 8.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-python"><pre><span></span><span class="c1"># Creates new dataframe, sorted alphabetically by team</span>
+<span class="n">teams_capacity2022</span> <span class="o">=</span> <span class="n">stadium_data</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">'Team'</span><span class="p">)</span> <span class="c1"># axis=0 is default for sorting by rows/index</span>
+<span class="n">teams_capacity2022</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Merges the stadium data in teams capacity with the total home attendance from attendance_data2022</span>
+<span class="n">teams_capacity2022</span> <span class="o">=</span> <span class="n">teams_capacity2022</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">attendance_data2022</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s2">"Team"</span><span class="p">,</span>
+                                    <span class="n">right_on</span><span class="o">=</span><span class="s2">"Tm"</span><span class="p">)[[</span><span class="s1">'Team'</span><span class="p">,</span> <span class="s1">'Capacity'</span><span class="p">,</span> <span class="s1">'Home'</span><span class="p">]]</span>
+
+<span class="c1"># If statement to divde the overall home attendance by 8 if an afc team or 9 if it's not an afc team</span>
+<span class="n">teams_capacity2022</span><span class="p">[</span><span class="s1">'Average Home Attendance'</span><span class="p">]</span> <span class="o">=</span> <span class="n">teams_capacity2022</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span>
+  <span class="n">row</span><span class="p">[</span><span class="s1">'Home'</span><span class="p">]</span> <span class="o">/</span> <span class="mi">8</span> <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s1">'Team'</span><span class="p">]</span> <span class="ow">in</span> <span class="n">afc</span> <span class="k">else</span> <span class="n">row</span><span class="p">[</span><span class="s1">'Home'</span><span class="p">]</span> <span class="o">/</span> <span class="mi">9</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">teams_capacity2022</span><span class="p">[</span><span class="s2">"Attendance Percentage"</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">teams_capacity2022</span><span class="p">[</span><span class="s2">"Average Home Attendance"</span><span class="p">]</span>
+                                           <span class="o">/</span> <span class="n">teams_capacity2022</span><span class="p">[</span><span class="s2">"Capacity"</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># Drop columns that we don't need anymore</span>
+<span class="n">teams_capacity2022</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">"Average Home Attendance"</span><span class="p">,</span> <span class="s2">"Capacity"</span><span class="p">,</span> <span class="s2">"Home"</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Add the home wins to the table so we can see the trends and compare</span>
+<span class="n">home_wins2022</span> <span class="o">=</span> <span class="n">Grouped_home_team_wins2022</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
+<span class="n">teams_capacity2022</span><span class="o">=</span><span class="n">teams_capacity2022</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">home_wins2022</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s2">"Team"</span><span class="p">,</span>
+                                    <span class="n">right_on</span><span class="o">=</span><span class="s2">"Winner/tie"</span><span class="p">)</span>
+<span class="n">teams_capacity2022</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">"Home Wins"</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">teams_capacity2022</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">teams_capacity2022</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[30]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div class="colab-df-container" id="df-cf571d9c-38f7-479f-b656-93453cdd30cf">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Team</th>
+<th>Attendance Percentage</th>
+<th>Home Wins</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>Minnesota Vikings</td>
+<td>100.735650</td>
+<td>8</td>
+</tr>
+<tr>
+<th>1</th>
+<td>Dallas Cowboys</td>
+<td>116.832222</td>
+<td>8</td>
+</tr>
+<tr>
+<th>2</th>
+<td>San Francisco 49ers</td>
+<td>104.567883</td>
+<td>8</td>
+</tr>
+<tr>
+<th>3</th>
+<td>Philadelphia Eagles</td>
+<td>103.366834</td>
+<td>7</td>
+</tr>
+<tr>
+<th>4</th>
+<td>Buffalo Bills</td>
+<td>95.563694</td>
+<td>7</td>
+</tr>
+<tr>
+<th>5</th>
+<td>Kansas City Chiefs</td>
+<td>85.496493</td>
+<td>7</td>
+</tr>
+<tr>
+<th>6</th>
+<td>Miami Dolphins</td>
+<td>101.384020</td>
+<td>6</td>
+</tr>
+<tr>
+<th>7</th>
+<td>Cincinnati Bengals</td>
+<td>88.478402</td>
+<td>6</td>
+</tr>
+<tr>
+<th>8</th>
+<td>Atlanta Falcons</td>
+<td>98.004382</td>
+<td>6</td>
+</tr>
+<tr>
+<th>9</th>
+<td>New York Giants</td>
+<td>92.695758</td>
+<td>5</td>
+</tr>
+<tr>
+<th>10</th>
+<td>Los Angeles Chargers</td>
+<td>99.936429</td>
+<td>5</td>
+</tr>
+<tr>
+<th>11</th>
+<td>Jacksonville Jaguars</td>
+<td>98.803781</td>
+<td>5</td>
+</tr>
+<tr>
+<th>12</th>
+<td>Detroit Lions</td>
+<td>97.574188</td>
+<td>5</td>
+</tr>
+<tr>
+<th>13</th>
+<td>Green Bay Packers</td>
+<td>93.540518</td>
+<td>5</td>
+</tr>
+<tr>
+<th>14</th>
+<td>Seattle Seahawks</td>
+<td>100.134323</td>
+<td>5</td>
+</tr>
+<tr>
+<th>15</th>
+<td>Tampa Bay Buccaneers</td>
+<td>104.702787</td>
+<td>5</td>
+</tr>
+<tr>
+<th>16</th>
+<td>Carolina Panthers</td>
+<td>95.304859</td>
+<td>5</td>
+</tr>
+<tr>
+<th>17</th>
+<td>Baltimore Ravens</td>
+<td>99.410278</td>
+<td>5</td>
+</tr>
+<tr>
+<th>18</th>
+<td>Pittsburgh Steelers</td>
+<td>96.901133</td>
+<td>4</td>
+</tr>
+<tr>
+<th>19</th>
+<td>New Orleans Saints</td>
+<td>94.289786</td>
+<td>4</td>
+</tr>
+<tr>
+<th>20</th>
+<td>Las Vegas Raiders</td>
+<td>84.848376</td>
+<td>4</td>
+</tr>
+<tr>
+<th>21</th>
+<td>Washington Commanders</td>
+<td>73.551899</td>
+<td>4</td>
+</tr>
+<tr>
+<th>22</th>
+<td>New England Patriots</td>
+<td>100.000000</td>
+<td>4</td>
+</tr>
+<tr>
+<th>23</th>
+<td>Los Angeles Rams</td>
+<td>103.905714</td>
+<td>4</td>
+</tr>
+<tr>
+<th>24</th>
+<td>Denver Broncos</td>
+<td>99.810345</td>
+<td>4</td>
+</tr>
+<tr>
+<th>25</th>
+<td>Cleveland Browns</td>
+<td>99.316592</td>
+<td>4</td>
+</tr>
+<tr>
+<th>26</th>
+<td>New York Jets</td>
+<td>94.556818</td>
+<td>3</td>
+</tr>
+<tr>
+<th>27</th>
+<td>Tennessee Titans</td>
+<td>99.237992</td>
+<td>3</td>
+</tr>
+<tr>
+<th>28</th>
+<td>Indianapolis Colts</td>
+<td>97.849627</td>
+<td>2</td>
+</tr>
+<tr>
+<th>29</th>
+<td>Chicago Bears</td>
+<td>97.273713</td>
+<td>2</td>
+</tr>
+<tr>
+<th>30</th>
+<td>Houston Texans</td>
+<td>94.591197</td>
+<td>1</td>
+</tr>
+<tr>
+<th>31</th>
+<td>Arizona Cardinals</td>
+<td>102.844374</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="colab-df-buttons">
+<div class="colab-df-container">
+<button class="colab-df-convert" onclick="convertToInteractive('df-cf571d9c-38f7-479f-b656-93453cdd30cf')" style="display:none;" title="Convert this dataframe to an interactive table.">
+<svg height="24px" viewbox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg">
+<path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
+</svg>
+</button>
+<style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+<script>
+      const buttonEl =
+        document.querySelector('#df-cf571d9c-38f7-479f-b656-93453cdd30cf button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-cf571d9c-38f7-479f-b656-93453cdd30cf');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+</div>
+<div id="df-dfe042e2-c4c4-4e68-8f0a-55c1fbf95cf6">
+<button class="colab-df-quickchart" onclick="quickchart('df-dfe042e2-c4c4-4e68-8f0a-55c1fbf95cf6')" style="display:none;" title="Suggest charts">
+<svg height="24px" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+<g>
+<path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"></path>
+</g>
+</svg>
+</button>
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+<script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-dfe042e2-c4c4-4e68-8f0a-55c1fbf95cf6 button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+<div id="id_ebd348cc-9243-4955-a403-937dc8efbebd">
+<style>
+      .colab-df-generate {
+        background-color: #E8F0FE;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        fill: #1967D2;
+        height: 32px;
+        padding: 0 0 0 0;
+        width: 32px;
+      }
+
+      .colab-df-generate:hover {
+        background-color: #E2EBFA;
+        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+        fill: #174EA6;
+      }
+
+      [theme=dark] .colab-df-generate {
+        background-color: #3B4455;
+        fill: #D2E3FC;
+      }
+
+      [theme=dark] .colab-df-generate:hover {
+        background-color: #434B5C;
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+        fill: #FFFFFF;
+      }
+    </style>
+<button class="colab-df-generate" onclick="generateWithVariable('teams_capacity2022')" style="display:none;" title="Generate code using this dataframe.">
+<svg height="24px" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z"></path>
+</svg>
+</button>
+<script>
+      (() => {
+      const buttonEl =
+        document.querySelector('#id_ebd348cc-9243-4955-a403-937dc8efbebd button.colab-df-generate');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      buttonEl.onclick = () => {
+        google.colab.notebook.generateWithVariable('teams_capacity2022');
+      }
+      })();
+    </script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Building-the-Model"><strong>Building the Model</strong><a class="anchor-link" href="#Building-the-Model">¶</a></h1>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>We are going to start with a linear regression model to see if there is any connection between the attendance percentage and the number of home wins between a team. We will use the 2022 data set as the training set and the 2023 data set as the test/validation set.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-python"><pre><span></span><span class="c1"># Splitting the data up into training (2022 data) and validation (2023)</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">teams_capacity2022</span><span class="p">[[</span><span class="s1">'Attendance Percentage'</span><span class="p">]]</span>
+<span class="n">y_train</span> <span class="o">=</span> <span class="n">teams_capacity2022</span><span class="p">[</span><span class="s1">'Home Wins'</span><span class="p">]</span>
+
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">teams_capacity</span><span class="p">[[</span><span class="s1">'Attendance Percentage'</span><span class="p">]]</span>
+<span class="n">y_test</span> <span class="o">=</span> <span class="n">teams_capacity</span><span class="p">[</span><span class="s1">'Home Wins'</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+
+<span class="c1"># Initialize Linear Regression Model</span>
+<span class="n">model_2022</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+
+<span class="c1"># Fit the model</span>
+<span class="n">model_2022</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Make predictions using the model</span>
+<span class="n">prediction_2023</span> <span class="o">=</span> <span class="n">model_2022</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># Display predicted results (2023)</span>
+<span class="n">predicted_results_2023</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">'Team'</span><span class="p">:</span> <span class="n">teams_capacity</span><span class="p">[</span><span class="s1">'Team'</span><span class="p">],</span>  <span class="c1"># Team Column</span>
+    <span class="s1">'Attendance Percentage'</span><span class="p">:</span> <span class="n">X_test</span><span class="p">[</span><span class="s1">'Attendance Percentage'</span><span class="p">],</span> <span class="c1"># Attendance Percentage Column</span>
+    <span class="s1">'Predicted Home Wins'</span><span class="p">:</span> <span class="n">prediction_2023</span> <span class="c1"># Predicted Home Wins from y_pred_2023</span>
+<span class="p">})</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">predicted_results_2023</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>                     Team  Attendance Percentage  Predicted Home Wins
+0        Cleveland Browns              99.875625             4.880179
+1          Dallas Cowboys             116.992969             5.765861
+2          Miami Dolphins             100.913368             4.933874
+3           Buffalo Bills              97.208723             4.742189
+4       Las Vegas Raiders             107.637115             5.281772
+5          Houston Texans              99.162275             4.843269
+6           Detroit Lions              99.757885             4.874087
+7     Philadelphia Eagles             103.380478             5.061526
+8      Cincinnati Bengals             100.801513             4.928086
+9        Baltimore Ravens              99.422287             4.856722
+10          Chicago Bears             100.438415             4.909299
+11      Green Bay Packers              95.565501             4.657166
+12       Tennessee Titans              93.314821             4.540711
+13    Pittsburgh Steelers              97.920078             4.778995
+14     Kansas City Chiefs             104.479919             5.118413
+15        Atlanta Falcons              98.033099             4.784843
+16         Denver Broncos             100.346360             4.904536
+17       Los Angeles Rams             104.500714             5.119489
+18       Seattle Seahawks              99.993817             4.886294
+19    San Francisco 49ers             104.606752             5.124976
+20     New Orleans Saints              95.645968             4.661329
+21        New York Giants              96.130152             4.686382
+22          New York Jets              94.412256             4.597495
+23   Tampa Bay Buccaneers              96.813060             4.721716
+24   Jacksonville Jaguars             102.679822             5.025273
+25     Indianapolis Colts              97.411774             4.752695
+26      Arizona Cardinals              99.154574             4.842871
+27      Minnesota Vikings             101.077795             4.942381
+28   Los Angeles Chargers              99.624127             4.867166
+29      Carolina Panthers              95.684013             4.663298
+30   New England Patriots              95.659654             4.662037
+31  Washington Commanders              80.950316             3.900950
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>As we can see above, the linear regression wasn't the best model. It only predicted 3.9 to 5.7 home wins, which is too narrow of a range. We can use calculations like mean squared error and root mean squared error to see how off our model is.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
+
+<span class="n">mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">prediction_2023</span><span class="p">)</span>
+<span class="n">rmse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mse</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">mse</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rmse</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>2.7502561431092887
+1.658389623432711
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>A mean squared error of 2.75 in the context of home games (0-9) is pretty high. That means it predicts on average a third of the range away from the actual value. To further evaluate the two factors, we decided to use a KNN model, with 5 nearest neighbors. This allowed us to see if the linear regression model was just a poor choice or if fan attendance is just a weak predictive factor.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsRegressor</span>
+
+<span class="c1"># Initialize the knn_model with 5 nearest neighbors</span>
+<span class="n">knn_model</span> <span class="o">=</span> <span class="n">KNeighborsRegressor</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="c1"># Fit the model</span>
+<span class="n">knn_model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Make predictions using the model</span>
+<span class="n">prediction_knn_2023</span> <span class="o">=</span> <span class="n">knn_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># Display predicted results</span>
+<span class="n">predicted_results_knn</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">'Team'</span><span class="p">:</span> <span class="n">teams_capacity</span><span class="p">[</span><span class="s1">'Team'</span><span class="p">],</span> <span class="c1"># Keeps the team column</span>
+    <span class="s1">'Attendance Percentage'</span><span class="p">:</span> <span class="n">X_test</span><span class="p">[</span><span class="s1">'Attendance Percentage'</span><span class="p">],</span> <span class="c1"># Keeps the Attendance Percentage Column</span>
+    <span class="s1">'Predicted Home Wins'</span><span class="p">:</span> <span class="n">prediction_knn_2023</span> <span class="c1"># Shows the predicted home win values</span>
+<span class="p">})</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">predicted_results_knn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>                     Team  Attendance Percentage  Predicted Home Wins
+0        Cleveland Browns              99.875625                  4.6
+1          Dallas Cowboys             116.992969                  6.4
+2          Miami Dolphins             100.913368                  5.6
+3           Buffalo Bills              97.208723                  3.8
+4       Las Vegas Raiders             107.637115                  5.0
+5          Houston Texans              99.162275                  4.2
+6           Detroit Lions              99.757885                  4.6
+7     Philadelphia Eagles             103.380478                  5.0
+8      Cincinnati Bengals             100.801513                  5.6
+9        Baltimore Ravens              99.422287                  4.2
+10          Chicago Bears             100.438415                  5.2
+11      Green Bay Packers              95.565501                  4.0
+12       Tennessee Titans              93.314821                  3.6
+13    Pittsburgh Steelers              97.920078                  4.0
+14     Kansas City Chiefs             104.479919                  5.0
+15        Atlanta Falcons              98.033099                  4.0
+16         Denver Broncos             100.346360                  5.2
+17       Los Angeles Rams             104.500714                  5.0
+18       Seattle Seahawks              99.993817                  4.6
+19    San Francisco 49ers             104.606752                  5.0
+20     New Orleans Saints              95.645968                  4.0
+21        New York Giants              96.130152                  4.6
+22          New York Jets              94.412256                  3.6
+23   Tampa Bay Buccaneers              96.813060                  3.8
+24   Jacksonville Jaguars             102.679822                  5.2
+25     Indianapolis Colts              97.411774                  3.8
+26      Arizona Cardinals              99.154574                  4.2
+27      Minnesota Vikings             101.077795                  5.6
+28   Los Angeles Chargers              99.624127                  4.4
+29      Carolina Panthers              95.684013                  4.0
+30   New England Patriots              95.659654                  4.0
+31  Washington Commanders              80.950316                  5.2
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>This gave us a wider range of values, with home wins between 3.6 and 6.4. While this is still a pretty narrow range, it's better than the linear regression.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [35]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-python"><pre><span></span><span class="n">mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">prediction_knn_2023</span><span class="p">)</span>
+<span class="n">rmse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mse</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">mse</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rmse</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>3.1050000000000004
+1.7621010186706096
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Although the range has widened, the mean squared error has also increased by almost 0.4. This suggests that the linear model may not have been the issue and instead our model should be improved by increasing the amount of training data with other seasons' statistics.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Reflection-on-our-Model"><strong>Reflection on our Model</strong><a class="anchor-link" href="#Reflection-on-our-Model">¶</a></h1><p>Our models showed that the fan attendance percentage isn't the best predictive factor for a team's success. Had we included dozens of more seasons worth of data into the model, that might've changed.</p>
+<p>We made some assumptions, such as equating the number of total fans to be majority home team fans. For important games, there may be a lot of the opposing team's fans as well. Unfortunately, this factor can't be taken into account since ticketing does not survey for which team they're rooting for. Additionally, a peer brought up the idea of a positive feedback loop that occurs when a team's fantastic win record draws a bigger crowd. This could be a hidden correlation that could be further explored.</p>
+<p>Sports truly are unpredictable and there are a lot of other factors that come into play for a team's overall success. Some of those factors can include  talent and skill, state of the coaching staff, weather for each game, whether they play on turf/grass or inside/outside, strength of schedule, and so much more.</p>
 </div>
 </div>
 </div>
@@ -12670,10 +12893,11 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1"># Data table 3 was downloaded as a CSV and put into our drive, so we have to access it differently</span>
 <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
@@ -12701,10 +12925,10 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="err">!</span><span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="o">--</span><span class="n">to</span> <span class="n">html</span> <span class="o">/</span><span class="n">content</span><span class="o">/</span><span class="n">drive</span><span class="o">/</span><span class="n">MyDrive</span><span class="o">/</span><span class="n">Colab</span>\ <span class="n">Notebooks</span><span class="o">/</span><span class="n">Data</span><span class="o">-</span><span class="n">Science</span><span class="o">-</span><span class="n">Project</span><span class="o">.</span><span class="n">ipynb</span>
+<div class="highlight hl-python"><pre><span></span><span class="ch">#!jupyter nbconvert --to html /content/drive/MyDrive/Colab\ Notebooks/Data-Science-Project.ipynb</span>
 </pre></div>
 </div>
 </div>
@@ -12717,18 +12941,226 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>[NbConvertApp] Converting notebook /content/drive/MyDrive/Colab Notebooks/Data-Science-Project.ipynb to html
-[NbConvertApp] ERROR | Notebook JSON is invalid: Additional properties are not allowed ('metadata' was unexpected)
+<pre>[NbConvertApp] WARNING | pattern '/content/drive/MyDrive/Colab Notebooks/Data-Science-Project.ipynb' matched no files
+This application is used to convert notebook files (*.ipynb)
+        to various other formats.
 
-Failed validating 'additionalProperties' in stream:
+        WARNING: THE COMMANDLINE INTERFACE MAY CHANGE IN FUTURE RELEASES.
 
-On instance['cells'][57]['outputs'][0]:
-{'metadata': {'tags': None},
- 'name': 'stdout',
- 'output_type': 'stream',
- 'text': 'Mounted at /content/drive\n'}
-[NbConvertApp] WARNING | Alternative text is missing on 1 image(s).
-[NbConvertApp] Writing 459253 bytes to /content/drive/MyDrive/Colab Notebooks/Data-Science-Project.html
+Options
+=======
+The options below are convenience aliases to configurable class-options,
+as listed in the "Equivalent to" description-line of the aliases.
+To see all configurable class-options for some &lt;cmd&gt;, use:
+    &lt;cmd&gt; --help-all
+
+--debug
+    set log level to logging.DEBUG (maximize logging output)
+    Equivalent to: [--Application.log_level=10]
+--show-config
+    Show the application's configuration (human-readable format)
+    Equivalent to: [--Application.show_config=True]
+--show-config-json
+    Show the application's configuration (json format)
+    Equivalent to: [--Application.show_config_json=True]
+--generate-config
+    generate default config file
+    Equivalent to: [--JupyterApp.generate_config=True]
+-y
+    Answer yes to any questions instead of prompting.
+    Equivalent to: [--JupyterApp.answer_yes=True]
+--execute
+    Execute the notebook prior to export.
+    Equivalent to: [--ExecutePreprocessor.enabled=True]
+--allow-errors
+    Continue notebook execution even if one of the cells throws an error and include the error message in the cell output (the default behaviour is to abort conversion). This flag is only relevant if '--execute' was specified, too.
+    Equivalent to: [--ExecutePreprocessor.allow_errors=True]
+--stdin
+    read a single notebook file from stdin. Write the resulting notebook with default basename 'notebook.*'
+    Equivalent to: [--NbConvertApp.from_stdin=True]
+--stdout
+    Write notebook output to stdout instead of files.
+    Equivalent to: [--NbConvertApp.writer_class=StdoutWriter]
+--inplace
+    Run nbconvert in place, overwriting the existing notebook (only
+            relevant when converting to notebook format)
+    Equivalent to: [--NbConvertApp.use_output_suffix=False --NbConvertApp.export_format=notebook --FilesWriter.build_directory=]
+--clear-output
+    Clear output of current file and save in place,
+            overwriting the existing notebook.
+    Equivalent to: [--NbConvertApp.use_output_suffix=False --NbConvertApp.export_format=notebook --FilesWriter.build_directory= --ClearOutputPreprocessor.enabled=True]
+--coalesce-streams
+    Coalesce consecutive stdout and stderr outputs into one stream (within each cell).
+    Equivalent to: [--NbConvertApp.use_output_suffix=False --NbConvertApp.export_format=notebook --FilesWriter.build_directory= --CoalesceStreamsPreprocessor.enabled=True]
+--no-prompt
+    Exclude input and output prompts from converted document.
+    Equivalent to: [--TemplateExporter.exclude_input_prompt=True --TemplateExporter.exclude_output_prompt=True]
+--no-input
+    Exclude input cells and output prompts from converted document.
+            This mode is ideal for generating code-free reports.
+    Equivalent to: [--TemplateExporter.exclude_output_prompt=True --TemplateExporter.exclude_input=True --TemplateExporter.exclude_input_prompt=True]
+--allow-chromium-download
+    Whether to allow downloading chromium if no suitable version is found on the system.
+    Equivalent to: [--WebPDFExporter.allow_chromium_download=True]
+--disable-chromium-sandbox
+    Disable chromium security sandbox when converting to PDF..
+    Equivalent to: [--WebPDFExporter.disable_sandbox=True]
+--show-input
+    Shows code input. This flag is only useful for dejavu users.
+    Equivalent to: [--TemplateExporter.exclude_input=False]
+--embed-images
+    Embed the images as base64 dataurls in the output. This flag is only useful for the HTML/WebPDF/Slides exports.
+    Equivalent to: [--HTMLExporter.embed_images=True]
+--sanitize-html
+    Whether the HTML in Markdown cells and cell outputs should be sanitized..
+    Equivalent to: [--HTMLExporter.sanitize_html=True]
+--log-level=&lt;Enum&gt;
+    Set the log level by value or name.
+    Choices: any of [0, 10, 20, 30, 40, 50, 'DEBUG', 'INFO', 'WARN', 'ERROR', 'CRITICAL']
+    Default: 30
+    Equivalent to: [--Application.log_level]
+--config=&lt;Unicode&gt;
+    Full path of a config file.
+    Default: ''
+    Equivalent to: [--JupyterApp.config_file]
+--to=&lt;Unicode&gt;
+    The export format to be used, either one of the built-in formats
+            ['asciidoc', 'custom', 'html', 'latex', 'markdown', 'notebook', 'pdf', 'python', 'qtpdf', 'qtpng', 'rst', 'script', 'slides', 'webpdf']
+            or a dotted object name that represents the import path for an
+            ``Exporter`` class
+    Default: ''
+    Equivalent to: [--NbConvertApp.export_format]
+--template=&lt;Unicode&gt;
+    Name of the template to use
+    Default: ''
+    Equivalent to: [--TemplateExporter.template_name]
+--template-file=&lt;Unicode&gt;
+    Name of the template file to use
+    Default: None
+    Equivalent to: [--TemplateExporter.template_file]
+--theme=&lt;Unicode&gt;
+    Template specific theme(e.g. the name of a JupyterLab CSS theme distributed
+    as prebuilt extension for the lab template)
+    Default: 'light'
+    Equivalent to: [--HTMLExporter.theme]
+--sanitize_html=&lt;Bool&gt;
+    Whether the HTML in Markdown cells and cell outputs should be sanitized.This
+    should be set to True by nbviewer or similar tools.
+    Default: False
+    Equivalent to: [--HTMLExporter.sanitize_html]
+--writer=&lt;DottedObjectName&gt;
+    Writer class used to write the
+                                        results of the conversion
+    Default: 'FilesWriter'
+    Equivalent to: [--NbConvertApp.writer_class]
+--post=&lt;DottedOrNone&gt;
+    PostProcessor class used to write the
+                                        results of the conversion
+    Default: ''
+    Equivalent to: [--NbConvertApp.postprocessor_class]
+--output=&lt;Unicode&gt;
+    Overwrite base name use for output files.
+                Supports pattern replacements '{notebook_name}'.
+    Default: '{notebook_name}'
+    Equivalent to: [--NbConvertApp.output_base]
+--output-dir=&lt;Unicode&gt;
+    Directory to write output(s) to. Defaults
+                                  to output to the directory of each notebook. To recover
+                                  previous default behaviour (outputting to the current
+                                  working directory) use . as the flag value.
+    Default: ''
+    Equivalent to: [--FilesWriter.build_directory]
+--reveal-prefix=&lt;Unicode&gt;
+    The URL prefix for reveal.js (version 3.x).
+            This defaults to the reveal CDN, but can be any url pointing to a copy
+            of reveal.js.
+            For speaker notes to work, this must be a relative path to a local
+            copy of reveal.js: e.g., "reveal.js".
+            If a relative path is given, it must be a subdirectory of the
+            current directory (from which the server is run).
+            See the usage documentation
+            (https://nbconvert.readthedocs.io/en/latest/usage.html#reveal-js-html-slideshow)
+            for more details.
+    Default: ''
+    Equivalent to: [--SlidesExporter.reveal_url_prefix]
+--nbformat=&lt;Enum&gt;
+    The nbformat version to write.
+            Use this to downgrade notebooks.
+    Choices: any of [1, 2, 3, 4]
+    Default: 4
+    Equivalent to: [--NotebookExporter.nbformat_version]
+
+Examples
+--------
+
+    The simplest way to use nbconvert is
+
+            &gt; jupyter nbconvert mynotebook.ipynb --to html
+
+            Options include ['asciidoc', 'custom', 'html', 'latex', 'markdown', 'notebook', 'pdf', 'python', 'qtpdf', 'qtpng', 'rst', 'script', 'slides', 'webpdf'].
+
+            &gt; jupyter nbconvert --to latex mynotebook.ipynb
+
+            Both HTML and LaTeX support multiple output templates. LaTeX includes
+            'base', 'article' and 'report'.  HTML includes 'basic', 'lab' and
+            'classic'. You can specify the flavor of the format used.
+
+            &gt; jupyter nbconvert --to html --template lab mynotebook.ipynb
+
+            You can also pipe the output to stdout, rather than a file
+
+            &gt; jupyter nbconvert mynotebook.ipynb --stdout
+
+            PDF is generated via latex
+
+            &gt; jupyter nbconvert mynotebook.ipynb --to pdf
+
+            You can get (and serve) a Reveal.js-powered slideshow
+
+            &gt; jupyter nbconvert myslides.ipynb --to slides --post serve
+
+            Multiple notebooks can be given at the command line in a couple of
+            different ways:
+
+            &gt; jupyter nbconvert notebook*.ipynb
+            &gt; jupyter nbconvert notebook1.ipynb notebook2.ipynb
+
+            or you can specify the notebooks list in a config file, containing::
+
+                c.NbConvertApp.notebooks = ["my_notebook.ipynb"]
+
+            &gt; jupyter nbconvert --config mycfg.py
+
+To see all available configurables, use `--help-all`.
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [39]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">'/content/drive'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount("/content/drive", force_remount=True).
 </pre>
 </div>
 </div>
